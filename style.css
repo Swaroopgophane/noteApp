@@ -119,6 +119,7 @@ body{
     font-size: 20px;
     border: none;
     outline: none;
+    padding-top: 10px;
     
 }
 
@@ -144,5 +145,14 @@ body{
 @media (max-width:790px){
     .note-container{
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* below 480px */
+
+@media (max-width:480px){
+    .text-box textarea{
+        font-size: 18px;
     }
 }
