@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+body{
+    background: #ebebe8;
+}
+
+.header{
+    background: #0b2840;
+    color: #fff;
+    padding: 25px 20px;
+}
+
+.logo span{
+    font-size: 25px;
+    
+}
+.logo i{
+    font-size: 25px;
+}
+.add-note{
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.add-note .add-note-btn{
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 12px;
+    border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s linear;
+    text-transform: capitalize;
+}
+
+.add-note .add-note-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background: #0b2840;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all .2s linear;
+}
+
+.add-note .add-note-btn:hover::before{
+    width: 100%;
+}
+.add-note .add-note-btn:hover{
+    color: #fff;
+}
+
+.add-note-btn i{
+    margin-right: 20px;
+    color: #fff;
+}
+
+.note-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.note-box{
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+.operations-btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.operations-btns i{
+    font-size: 20px;
+    background: #0b2840;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.operations-btns i:hover{
+    color: #0b2840;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.336)0px 2px 6px 2px;
+}
+.text-box{
+    margin-top: 20px;
+}
+.text-box textarea{
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/* media query */
+
+/* below 1200px */
+
+@media (max-width:1200px){
+    .note-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* below 790 */
+
+@media (max-width:790px){
+    .note-container{
+        grid-template-columns: 1fr;
+    }
+}
